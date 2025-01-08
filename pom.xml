@@ -41,7 +41,7 @@
  | |) / -_) '_ \/ -_) ' \/ _` / -_) ' \/ _| / -_|_-<
  |___/\___| .__/\___|_||_\__,_\___|_||_\__|_\___/__/
           |_|     -->
-	<dependencyManagement>
+
 		<dependencies>
 
 			<!--
@@ -73,7 +73,7 @@
 				<groupId>org.testng</groupId>
 				<artifactId>testng</artifactId>
 				<version>${testNG.version}</version>
-				<scope>test</scope>
+				<scope>compile</scope>
 			</dependency>
 
 
@@ -101,7 +101,7 @@
 
 
 		</dependencies>
-	</dependencyManagement>
+
 	<!--
   ___ _           _         
  | _ \ |_  _ __ _(_)_ _  ___
