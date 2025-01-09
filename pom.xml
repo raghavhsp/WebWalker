@@ -32,6 +32,8 @@
 		<java.compole.source.version>17</java.compole.source.version>
 		<java.compole.target.version>17</java.compole.target.version>
 		<allure.testNG.version>2.29.1</allure.testNG.version>
+		<chaintest.testng.version>1.0.0</chaintest.testng.version>
+		<slf4j.version>2.0.16</slf4j.version>
 	</properties>
 
 
@@ -85,11 +87,11 @@
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-			<dependency>
+		<!--	<dependency>
 				<groupId>com.aventstack</groupId>
 				<artifactId>extentreports</artifactId>
 				<version>${extentreports.version}</version>
-			</dependency>
+			</dependency>-->
 
 			<!--
 			https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
@@ -97,10 +99,37 @@
 				<groupId>io.qameta.allure</groupId>
 				<artifactId>allure-testng</artifactId>
 				<version>${allure.testNG.version}</version>
+				<scope>compile</scope>
+			</dependency>
+			
+			
+			<dependency>
+			  <groupId>com.aventstack</groupId>
+			  <artifactId>chaintest-testng</artifactId>
+			  <version>${chaintest.testng.version}</version>
+			   <scope>provided</scope>
 			</dependency>
 
-
+			<dependency>
+			    <groupId>org.slf4j</groupId>
+			    <artifactId>slf4j-api</artifactId>
+			    <version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.slf4j</groupId>
+			    <artifactId>slf4j-simple</artifactId>
+			    <version>${slf4j.version}</version>
+			</dependency>
+			
+		<!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
+		<dependency>
+		    <groupId>com.github.javafaker</groupId>
+		    <artifactId>javafaker</artifactId>
+		    <version>1.0.2</version>
+		</dependency>
 		</dependencies>
+		
+
 
 	<!--
   ___ _           _         
