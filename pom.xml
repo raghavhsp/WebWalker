@@ -32,8 +32,9 @@
 		<java.compole.source.version>17</java.compole.source.version>
 		<java.compole.target.version>17</java.compole.target.version>
 		<allure.testNG.version>2.29.1</allure.testNG.version>
-		<chaintest.testng.version>1.0.0</chaintest.testng.version>
+		<chaintest.testng.version>1.0.3</chaintest.testng.version>
 		<slf4j.version>2.0.16</slf4j.version>
+		<javafaker.version>1.0.2</javafaker.version>
 	</properties>
 
 
@@ -121,11 +122,17 @@
 			    <version>${slf4j.version}</version>
 			</dependency>
 			
+			<dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>1.0.13</version>
+    </dependency>
+			
 		<!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
 		<dependency>
 		    <groupId>com.github.javafaker</groupId>
 		    <artifactId>javafaker</artifactId>
-		    <version>1.0.2</version>
+		    <version>${javafaker.version}</version>
 		</dependency>
 		</dependencies>
 		
