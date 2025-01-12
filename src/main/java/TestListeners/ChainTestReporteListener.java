@@ -1,4 +1,4 @@
-package ChainTestSample;
+package TestListeners;
 
 import java.util.List;
 import java.util.Map;
@@ -17,7 +17,7 @@ import org.testng.ITestResult;
 import com.aventstack.chaintest.domain.Test;
 import com.aventstack.chaintest.service.ChainPluginService;
 
-public class FlightBookingDummyTest implements IExecutionListener, ISuiteListener, IClassListener, ITestListener {
+public class ChainTestReporteListener implements IExecutionListener, ISuiteListener, IClassListener, ITestListener {
 
     private static final String TESTNG = "testng";
     private static final Map<String, Test> _suites = new ConcurrentHashMap<>();

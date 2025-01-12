@@ -1,4 +1,4 @@
-package FixedData;
+package fixedData;
 
 public enum BrowserType {
 	
