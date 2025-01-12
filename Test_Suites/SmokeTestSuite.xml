@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Smoke Test Suite" guice-stage="DEVELOPMENT ">
+
+	<listeners>
+	 	<listener class-name="TestListeners.ChainTestReporteListener" />
+		<!--<listener class-name="com.aventstack.chaintest.plugins.ChainTestListener" /> -->
+	</listeners>
+
+	<test  name="Smoke test of features">
+		<classes>
+			<class name="TestCases.Validate_Web_Inputs_App" />
+			<class name="TestCases.Validate_Test_Login_Page_App" />
+		</classes>
+	</test> 
+</suite> 
+

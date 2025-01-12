@@ -10,7 +10,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
-import FixedData.BrowserType;
+import fixedData.BrowserType;
 
 public class BrowserFactory {
 	

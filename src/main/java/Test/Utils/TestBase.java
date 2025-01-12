@@ -6,8 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
-import FixedData.BrowserType;
 import Selenium.Utils.BrowserFactory;
+import fixedData.BrowserType;
 
 
 
@@ -21,7 +21,7 @@ public class TestBase {
 	public static Duration fiftySec = Duration.ofSeconds(10);
 	
 	@Parameters({"browserType"})
-	@BeforeClass (alwaysRun = true) 
+	@BeforeClass (alwaysRun = true ,description = "Get browser method runs before each and every class to generate a driver instance") 
 	public void getBrowser()
 	{
 		this.driver=browserFactory.initializeBrowser( BrowserType.valueOf("CHROME"));

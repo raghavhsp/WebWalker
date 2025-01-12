@@ -3,6 +3,7 @@ package TestCases;
 import static org.testng.Assert.ARRAY_MISMATCH_TEMPLATE;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.github.javafaker.Faker;
@@ -19,7 +20,7 @@ MouseOperations mouseOps = new MouseOperations();
 SampleApp_WebInputs_Locators saWebInputs = new SampleApp_WebInputs_Locators();
 GenericHelper genHelper = new GenericHelper();
 Faker fake = new Faker();
-	
+
 	@Test
 	public void validateAllInputs()
 	{
@@ -28,7 +29,7 @@ Faker fake = new Faker();
 		genHelper.scrollElementInView(driver, appLink);
 		
 		boolean appLinkClicked=mouseOps.click(driver, appLink);
-		System.out.println("Is App Link Clicked" +appLinkClicked);
+		Assert.assertTrue(appLinkClicked , "App link button clicked successfully ?" );
 		// Add Value to all fields
 		driver.findElement(saWebInputs.inputNumber).sendKeys(String.valueOf(fake.number().numberBetween(10, 100)));
 		driver.findElement(saWebInputs.inputText).sendKeys(fake.funnyName().name());

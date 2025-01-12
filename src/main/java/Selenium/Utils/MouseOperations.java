@@ -12,7 +12,7 @@ import Test.Utils.TestBase;
 public class MouseOperations {
 	
 	JavaScriptUtil javaScriptUtil = new JavaScriptUtil();
-	
+	GenericHelper genHelper = new GenericHelper();
 	
 	/**
 	 * @description click method
