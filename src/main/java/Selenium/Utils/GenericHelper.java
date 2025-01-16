@@ -1,6 +1,9 @@
 package Selenium.Utils;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Optional;
 
 import org.openqa.selenium.By;
@@ -28,6 +31,26 @@ public class GenericHelper extends TestBase{
 	{
 		try {
 			return Optional.ofNullable(driver.findElement(locator));
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
+	}
+	
+	/**
+	 * @description method to locate webElements with By locator
+	 * @since 17-JAN-2025
+	 * @author raghavagnihotri
+	 * @param driver - Web drive instance
+	 * @param locator - by locator of element
+	 * @return Options<WebElement> - WebElement / null
+	 */
+	
+	public Optional <List<WebElement>> locateElements(WebDriver driver , By locator)
+	{
+		try {
+			return Optional.ofNullable(driver.findElements(locator));
 		}
 		catch (Exception e) {
 			// TODO: handle exception
@@ -145,6 +168,40 @@ public class GenericHelper extends TestBase{
 		
 		// Wait for element to be present then grab text 
 		wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+	}
+	
+	
+	/**
+	 * @description get map of webElements and its respective texts 
+	 * @author raghavagnihotri
+	 * @since 17-JAN-2025
+	 * @param driver - WebDriver instance
+	 * @param locator - By locator of elements
+	 * @return 
+	 */
+	
+	public Optional<LinkedHashMap<WebElement , String>> getElementsNText(WebDriver driver , By locator)
+	{
+		LinkedHashMap<WebElement, String> elementMap = new LinkedHashMap<>();
+		
+		// Wait for presence of element
+		waitForPresence(driver, locator, tenSec);
+		
+		//Locate WebElements
+		Optional<List<WebElement>> elementsList = locateElements(driver, locator);
+		
+		
+		//Check if elements located
+		if (elementsList.isPresent())
+		{
+			for (WebElement element : elementsList.get())
+			{
+				elementMap.put(element, element.getText());
+			}
+		}
+		
+		return Optional.ofNullable(elementMap);
+		
 	}
 
 }
