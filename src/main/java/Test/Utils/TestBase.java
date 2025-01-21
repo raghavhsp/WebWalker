@@ -3,6 +3,7 @@ package Test.Utils;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
@@ -27,6 +28,13 @@ public class TestBase {
 		this.driver=browserFactory.initializeBrowser( BrowserType.valueOf("CHROME"));
 		this.driver.get("https://practice.expandtesting.com/");
 		this.driver.manage().window().maximize();
+	}
+	
+	
+	@AfterClass (alwaysRun = true)
+	public void afterEachClass()
+	{
+		driver.quit();
 	}
 
 }

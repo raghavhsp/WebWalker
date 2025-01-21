@@ -32,7 +32,7 @@
 		<java.compole.source.version>17</java.compole.source.version>
 		<java.compole.target.version>17</java.compole.target.version>
 		<allure.testNG.version>2.29.1</allure.testNG.version>
-		<chaintest.testng.version>1.0.3</chaintest.testng.version>
+		<chaintest.testng.version>1.0.7</chaintest.testng.version>
 		<slf4j.version>2.0.16</slf4j.version>
 		<javafaker.version>1.0.2</javafaker.version>
 	</properties>
@@ -153,7 +153,7 @@
 				https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
 				<plugin>
 					<artifactId>maven-clean-plugin</artifactId>
-					<version>4.0.0-beta-1</version>
+					<version>3.3.2</version>
 				</plugin>
 				<!-- default lifecycle, jar packaging: see
 				https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
@@ -183,7 +183,7 @@
 						<suiteXmlFiles>
 
 							<suiteXmlFile>
-								${project.basedir}/suites/${suiteXmlFile}</suiteXmlFile>
+								${project.basedir}/Test_Suites/${suiteXmlFile}</suiteXmlFile>
 
 						</suiteXmlFiles>
 
