@@ -34,10 +34,11 @@ Faker fake = new Faker();
 		String password =genHelper.grabText(driver, saLogin.passwordTxt).get();
 		
 		Assert.assertTrue(null!=userName && null!=password ,"User name and password found ?");
-		
+		System.out.println("UserName : "+userName+" Password :"+password);
 		// Enter UserName and password
-		genHelper.sendKeys(driver, saLogin.userNameTxt, userName);
-		genHelper.sendKeys(driver, saLogin.passwordTxt, password);
+		genHelper.scrollElementInView(driver, saLogin.userNameTxt);
+		genHelper.sendKeys(driver, saLogin.userNameTxtBox, userName);
+		genHelper.sendKeys(driver, saLogin.passwordTxtBox, password);
 		
 		// Hit Login button
 		mouseOps.click(driver, saLogin.loginBtn);
