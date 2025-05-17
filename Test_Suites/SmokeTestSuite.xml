@@ -12,6 +12,7 @@
 			<class name="TestCases.Validate_Web_Inputs_App" />
 			<class name="TestCases.Validate_Test_Login_Page_App" />
 			<class name="TestCases.Validate_Dynamic_Table_App" />
+			<class name="TestCases.Validate_Regiter_Page" />
 		</classes>
 	</test> 
 </suite> 

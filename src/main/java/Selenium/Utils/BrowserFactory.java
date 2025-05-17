@@ -18,11 +18,21 @@ public class BrowserFactory {
 	{
 		WebDriver driver = null;
 		
-		switch (browser) 
+		// Get Operating System
+		String osName = System.getProperty("os.name");
+        System.out.println("Operating System: " + osName);
+		
+        switch (browser) 
 		{
 			case CHROME->
-			{
-				ChromeOptions options = new ChromeOptions().setBinary("/Applications/Brave Browser.app/Contents/MacOS/Brave Browser");
+			{ ChromeOptions options;
+				
+		        if (osName.toLowerCase().contains("windows"))
+		        {
+		        options = new ChromeOptions().setBinary("C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
+		        }
+		        else
+				 options = new ChromeOptions().setBinary("/Applications/Brave Browser.app/Contents/MacOS/Brave Browser");
 			//	options.addExtensions(new File(System.getProperty("user.dir")+File.pathSeparator+"BrowserOptions"+File.separator+"Chrome"+File.separator+"AD_Blocker.crx"));
 			//	options.addExtensions(new File("/Users/raghavagnihotri/Raghav_Agnihotri/Projects/WebWalker/BrowserExtensions/Chrmoe/AD_Blocker.crx"));
 				
