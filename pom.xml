@@ -23,17 +23,17 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.release>17</maven.compiler.release>
-		<testNG.version>7.10.2</testNG.version>
-		<selenium.version>4.27.0</selenium.version>
-		<apachePOI.version>5.3.0</apachePOI.version>
-		<cucumber.version>7.20.1</cucumber.version>
+		<testNG.version>7.11.0</testNG.version>
+		<selenium.version>4.32.0</selenium.version>
+		<apachePOI.version>5.4.1</apachePOI.version>
+		<cucumber.version>7.22.1</cucumber.version>
 		<commons-io.version>2.18.0</commons-io.version>
 		<extentreports.version>5.1.2</extentreports.version>
 		<java.compole.source.version>17</java.compole.source.version>
 		<java.compole.target.version>17</java.compole.target.version>
 		<allure.testNG.version>2.29.1</allure.testNG.version>
 		<chaintest.testng.version>1.0.7</chaintest.testng.version>
-		<slf4j.version>2.0.16</slf4j.version>
+		<slf4j.version>2.0.17</slf4j.version>
 		<javafaker.version>1.0.2</javafaker.version>
 	</properties>
 
