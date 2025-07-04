@@ -23,11 +23,12 @@ public class TestBase {
 	
 	@Parameters({"browserType"})
 	@BeforeClass (alwaysRun = true ,description = "Get browser method runs before each and every class to generate a driver instance") 
-	public void getBrowser()
+	public WebDriver getBrowser()
 	{
 		this.driver=browserFactory.initializeBrowser( BrowserType.valueOf("CHROME"));
 		this.driver.get("https://practice.expandtesting.com/");
 		this.driver.manage().window().maximize();
+		return driver;
 	}
 	
 	
