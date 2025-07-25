@@ -1,0 +1,21 @@
+<configuration>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+<!--                %d{hh:mm:ss a} [%t] %-5level %logger{36} [%C{1}.java:%L] - %msg%n-->
+                %d{yyyy-MM-dd hh:mm:ss a} %-5p %c{1}.java:%L -%m%n
+<!--                %d{yyyy-MM-dd hh:mm:ss a} %-5p %c{1}.java:%L (%F:%L) - %m\n-->
+            </Pattern>
+        </layout>
+    </appender>
+
+    <logger name="logback-logging" level="debug" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+    <root level="debug">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>

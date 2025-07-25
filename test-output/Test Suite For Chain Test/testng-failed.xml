@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Test Suite For Chain Test]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test Suite For Chain Test(failed)">
+    <classes>
+      <class name="ChainTestSample.FlightBookingAppTest">
+        <methods>
+          <include name="testPaymentGatewayIntegration"/>
+          <include name="test_flight_booking_with_invalid_credentials"/>
+          <include name="testFlightBookingWithInvalidCredentials"/>
+          <include name="testFlightCancellation"/>
+          <include name="test_flight_cancellation"/>
+        </methods>
+      </class> <!-- ChainTestSample.FlightBookingAppTest -->
+      <class name="ChainTestSample.AmazonTestCase">
+        <methods>
+          <include name="test_add_to_cart_failure"/>
+        </methods>
+      </class> <!-- ChainTestSample.AmazonTestCase -->
+    </classes>
+  </test> <!-- Test Suite For Chain Test(failed) -->
+</suite> <!-- Failed suite [Test Suite For Chain Test] -->

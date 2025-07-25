@@ -94,20 +94,20 @@
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-		<!--	<dependency>
+		<dependency>
 				<groupId>com.aventstack</groupId>
 				<artifactId>extentreports</artifactId>
 				<version>${extentreports.version}</version>
-			</dependency>-->
+			</dependency>
 
 			<!--
 			https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
-			<dependency>
+			<!--	<dependency>
 				<groupId>io.qameta.allure</groupId>
 				<artifactId>allure-testng</artifactId>
 				<version>${allure.testNG.version}</version>
 				<scope>compile</scope>
-			</dependency>
+			</dependency>-->
 			
 			
 			<dependency>
@@ -117,7 +117,7 @@
 			   <scope>provided</scope>
 			</dependency>
 
-			<dependency>
+	<!-- 		<dependency>
 			    <groupId>org.slf4j</groupId>
 			    <artifactId>slf4j-api</artifactId>
 			    <version>${slf4j.version}</version>
@@ -132,7 +132,24 @@
         <groupId>ch.qos.logback</groupId>
         <artifactId>logback-classic</artifactId>
         <version>1.0.13</version>
+    </dependency>-->
+    
+        <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>2.0.16</version>
     </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.5.9</version>
+    </dependency>
+<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-testng</artifactId>
+    <version>2.29.1</version>
+</dependency>
 			
 		<!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
 		<dependency>
@@ -141,6 +158,7 @@
 		    <version>${javafaker.version}</version>
 		</dependency>
 		</dependencies>
+		
 		
 
 

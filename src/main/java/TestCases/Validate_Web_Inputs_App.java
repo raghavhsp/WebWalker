@@ -10,9 +10,9 @@ import com.github.javafaker.Faker;
 
 import PageFactory.Expandtesting.HomePageLocators;
 import PageFactory.Expandtesting.SampleApp_WebInputs_Locators;
-import Selenium.Utils.GenericHelper;
-import Selenium.Utils.MouseOperations;
-import Test.Utils.TestBase;
+import Utils.Selenium.GenericHelper;
+import Utils.Selenium.MouseOperations;
+import Utils.Test.TestBase;
 
 public class Validate_Web_Inputs_App extends TestBase{
 HomePageLocators homePageLocator = new HomePageLocators();
