@@ -8,9 +8,9 @@ import com.github.javafaker.Faker;
 
 import PageFactory.Expandtesting.HomePageLocators;
 import PageFactory.Expandtesting.RegiterPageLocators;
-import Selenium.Utils.GenericHelper;
-import Selenium.Utils.MouseOperations;
-import Test.Utils.TestBase;
+import Utils.Selenium.GenericHelper;
+import Utils.Selenium.MouseOperations;
+import Utils.Test.TestBase;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

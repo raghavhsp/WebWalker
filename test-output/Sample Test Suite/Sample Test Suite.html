@@ -1,0 +1,571 @@
+<html>
+<head>
+<title>TestNG:  Sample Test Suite</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Sample Test Suite</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>88/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Jan 10 02:28:03 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>0 seconds (152 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_add_to_cart_failure()'><b>test_add_to_cart_failure</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td><div><pre>java.lang.AssertionError: Adding to cart should not fail under normal conditions. expected [true] but found [false]
+	at ChainTestSample.AmazonTestCase.test_add_to_cart_failure(AmazonTestCase.java:155)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1241938981", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1241938981'><pre>java.lang.AssertionError: Adding to cart should not fail under normal conditions. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at ChainTestSample.AmazonTestCase.test_add_to_cart_failure(AmazonTestCase.java:155)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_user_registration_functionality()'><b>test_user_registration_functionality</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_product_search()'><b>test_product_search</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_flight_booking_with_international_itinerary()'><b>test_flight_booking_with_international_itinerary</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_flight_booking_with_refundable_ticket_option()'><b>test_flight_booking_with_refundable_ticket_option</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_notification_preferences()'><b>test_notification_preferences</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_check_flight_departure_time()'><b>test_check_flight_departure_time</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_flight_booking_with_special_assistance_request()'><b>test_flight_booking_with_special_assistance_request</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_account_update()'><b>test_account_update</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_email_notification_for_flight_delay()'><b>test_email_notification_for_flight_delay</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_add_additional_services_during_booking()'><b>test_add_additional_services_during_booking</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_real_time_flight_status_update()'><b>test_real_time_flight_status_update</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_gift_card_redeem()'><b>test_gift_card_redeem</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_add_to_cart()'><b>test_add_to_cart</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_check_flight_loyalty_points_status()'><b>test_check_flight_loyalty_points_status</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_flight_schedule_update()'><b>test_flight_schedule_update</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_order_history()'><b>test_order_history</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_account_registration()'><b>test_account_registration</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_check_in_with_passport_details()'><b>test_check_in_with_passport_details</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_flight_booking_with_multi_currency_support()'><b>test_flight_booking_with_multi_currency_support</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_wishlist_removal()'><b>test_wishlist_removal</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_flight_booking_flow()'><b>test_flight_booking_flow</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_customer_support_contact()'><b>test_customer_support_contact</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_special_offer_display_for_flights()'><b>test_special_offer_display_for_flights</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_mobile_app_login_functionality()'><b>test_mobile_app_login_functionality</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_search_flights_by_departure_city()'><b>test_search_flights_by_departure_city</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_cancel_order()'><b>test_cancel_order</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_flight_booking_with_invalid_credentials()'><b>test_flight_booking_with_invalid_credentials</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_check_flight_availability_for_specific_date()'><b>test_check_flight_availability_for_specific_date</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_manage_passenger_information_after_booking()'><b>test_manage_passenger_information_after_booking</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_retrieve_booking_history()'><b>test_retrieve_booking_history</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.testFlightBookingWithInvalidCredentials()'><b>testFlightBookingWithInvalidCredentials</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.testPaymentGatewayIntegration()'><b>testPaymentGatewayIntegration</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_payment_gateway()'><b>test_payment_gateway</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_flight_booking_with_coupon_code()'><b>test_flight_booking_with_coupon_code</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_booking_confirmation_email()'><b>test_booking_confirmation_email</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_verify_luggage_policy_on_booking()'><b>test_verify_luggage_policy_on_booking</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_flight_schedule_lookup_by_flight_number()'><b>test_flight_schedule_lookup_by_flight_number</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_remove_from_cart()'><b>test_remove_from_cart</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_user_profile_update()'><b>test_user_profile_update</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_multi_city_flight_booking()'><b>test_multi_city_flight_booking</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_password_reset()'><b>test_password_reset</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_flight_search_by_airline()'><b>test_flight_search_by_airline</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_check_flight_baggage_allowance()'><b>test_check_flight_baggage_allowance</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.testFlightCancellation()'><b>testFlightCancellation</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_booking_with_promo_code_application()'><b>test_booking_with_promo_code_application</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_flight_cancellation()'><b>test_flight_cancellation</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_flight_route_update()'><b>test_flight_route_update</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_order_tracking()'><b>test_order_tracking</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_flight_status_check()'><b>test_flight_status_check</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_check_in_for_online_flight_check_in_feature()'><b>test_check_in_for_online_flight_check_in_feature</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_payment_gateway_integration()'><b>test_payment_gateway_integration</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_checkout_process()'><b>test_checkout_process</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_product_review_submission()'><b>test_product_review_submission</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_seat_selection_during_booking()'><b>test_seat_selection_during_booking</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_subscription_management()'><b>test_subscription_management</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_search_for_one_way_flight_booking()'><b>test_search_for_one_way_flight_booking</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_shipping_options()'><b>test_shipping_options</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_cancel_booking_within_refund_policy()'><b>test_cancel_booking_within_refund_policy</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_product_sorting()'><b>test_product_sorting</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_flight_schedule_update_after_cancellation()'><b>test_flight_schedule_update_after_cancellation</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_flight_modification()'><b>test_flight_modification</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_user_account_deletion_functionality()'><b>test_user_account_deletion_functionality</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_view_flight_details()'><b>test_view_flight_details</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_flight_ticket_printing_functionality()'><b>test_flight_ticket_printing_functionality</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_flight_booking_with_travel_flexibility_option()'><b>test_flight_booking_with_travel_flexibility_option</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_wishlist_addition()'><b>test_wishlist_addition</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_user_logout_functionality()'><b>test_user_logout_functionality</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_promotions_display()'><b>test_promotions_display</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_flight_price_comparison()'><b>test_flight_price_comparison</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_gift_card_purchase()'><b>test_gift_card_purchase</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_flight_booking_with_group_discount()'><b>test_flight_booking_with_group_discount</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_flight_date_change_feature()'><b>test_flight_date_change_feature</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_flight_availability_during_peak_season()'><b>test_flight_availability_during_peak_season</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_user_login()'><b>test_user_login</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_user_logout()'><b>test_user_logout</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_address_book_management()'><b>test_address_book_management</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_customer_service_contact_information_visibility()'><b>test_customer_service_contact_information_visibility</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_verify_flight_ticket_validity()'><b>test_verify_flight_ticket_validity</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_flight_booking_with_airport_transfer_service()'><b>test_flight_booking_with_airport_transfer_service</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_flight_search_by_arrival_city()'><b>test_flight_search_by_arrival_city</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_travel_insurance_purchase_flow()'><b>test_travel_insurance_purchase_flow</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_flight_availability_on_date()'><b>test_flight_availability_on_date</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_select_seat_and_meal_preferences()'><b>test_select_seat_and_meal_preferences</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_user_login_functionality()'><b>test_user_login_functionality</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_flight_booking_for_family_with_minor_children()'><b>test_flight_booking_for_family_with_minor_children</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_frequent_flyer_miles_redemption_flow()'><b>test_frequent_flyer_miles_redemption_flow</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+<tr>
+<td title='ChainTestSample.AmazonTestCase.test_product_filtering()'><b>test_product_filtering</b><br>Test class: ChainTestSample.AmazonTestCase</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.AmazonTestCase@5c86dbc5</td></tr>
+<tr>
+<td title='ChainTestSample.FlightBookingAppTest.test_manage_booking_after_successful_payment()'><b>test_manage_booking_after_successful_payment</b><br>Test class: ChainTestSample.FlightBookingAppTest</td>
+<td></td>
+<td>0</td>
+<td>ChainTestSample.FlightBookingAppTest@769a1df5</td></tr>
+</table><p>
+</body>
+</html>

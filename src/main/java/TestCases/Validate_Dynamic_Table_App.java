@@ -11,9 +11,9 @@ import org.testng.annotations.Test;
 
 import PageFactory.Expandtesting.HomePageLocators;
 import PageFactory.Expandtesting.SampleApp_Dynamic_Tabel;
-import Selenium.Utils.GenericHelper;
-import Selenium.Utils.MouseOperations;
-import Test.Utils.TestBase;
+import Utils.Selenium.GenericHelper;
+import Utils.Selenium.MouseOperations;
+import Utils.Test.TestBase;
 
 public class Validate_Dynamic_Table_App extends TestBase{
 	HomePageLocators homePageLocator = new HomePageLocators();
